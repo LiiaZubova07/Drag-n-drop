@@ -17,7 +17,8 @@ const dragAndDrop = () => {
   const dragOver = function (event) {
     event.preventDefault();
   };
-  const dragEnter = function () {
+  const dragEnter = function (event) {
+	event.preventDefault();
     this.classList.add('hovered');
   };
   const dragLeave = function () {
@@ -25,6 +26,7 @@ const dragAndDrop = () => {
   };
   const dragDrop = function () {
     this.append(card);
+	 this.classList.remove('hovered');
   };
 
   cells.forEach((cell) => {
