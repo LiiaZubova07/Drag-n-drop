@@ -35,7 +35,7 @@ body {
 
 .list__caption {
 	width: calc(25% - 40px);
-	margin: 0 20px;
+	margin: 20px;
 	list-style-type: none;
 	font-weight: bold;
 	color: #0747a6;
@@ -51,3 +51,31 @@ body {
 	overflow: hidden;
 }
 
+.list__card {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	text-align: center;
+	min-height: 100%;
+	cursor: all-scroll;
+}
+
+.list__card-header {
+	font-weight: bold;
+	padding: 12px 20px;
+	background-color: #0747a6;
+	color: white
+}
+
+.list__card-info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	/*элемент занял всё доступное пространство*/
+	padding: 12px 20px;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-style: 14px;
+}
