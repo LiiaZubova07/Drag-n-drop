@@ -79,3 +79,11 @@ body {
 	font-weight: 600;
 	font-style: 14px;
 }
+
+.hide {
+	display: none;
+}
+
+.hovered {
+	background-color: #d1d8e2;
+}

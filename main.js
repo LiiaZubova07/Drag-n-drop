@@ -1,0 +1,42 @@
+const dragAndDrop = () => {
+  const card = document.querySelector('.js-card');
+  const cells = document.querySelectorAll('.js-cell');
+
+  const dragStart = function () {
+    setTimeout(() => {
+      /*this будет ссылаться на карточку*/
+      this.classList.add('hide');
+    }, 0);
+  };
+
+  const dragEnd = function () {
+    /*this будет ссылаться на карточку*/
+    this.classList.remove('hide');
+  };
+
+  const dragOver = function (event) {
+    event.preventDefault();
+  };
+  const dragEnter = function () {
+    this.classList.add('hovered');
+  };
+  const dragLeave = function () {
+	this.classList.remove('hovered');
+  };
+  const dragDrop = function () {
+    this.append(card);
+  };
+
+  cells.forEach((cell) => {
+    cell.addEventListener('dragover', dragOver);
+    cell.addEventListener('dragenter', dragEnter);
+    cell.addEventListener('dragleave', dragLeave);
+    cell.addEventListener('drop', dragDrop);
+
+  });
+
+  card.addEventListener('dragstart', dragStart);
+  card.addEventListener('dragend', dragEnd);
+};
+
+dragAndDrop();
