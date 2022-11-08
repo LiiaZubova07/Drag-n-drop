@@ -47,7 +47,7 @@ body {
 	min-height: 150px;
 	list-style-type: none;
 	box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.2);
-	background-color: #f0f2f5;
+	background-color: white;
 	overflow: hidden;
 }
 
@@ -58,6 +58,7 @@ body {
 	text-align: center;
 	min-height: 100%;
 	cursor: all-scroll;
+	background-color: #fff;
 }
 
 .list__card-header {
